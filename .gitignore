@@ -86,3 +86,5 @@ GTAGS
 \#*#
 *.o
 *.ko
+/load.imx
+/imxdownload
