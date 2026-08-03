@@ -796,6 +796,25 @@ struct display_info_t const displays[] = {{
 		.vsync_len      = 10,
 		.sync           = 0,
 		.vmode          = FB_VMODE_NONINTERLACED
+}},{
+	.bus = MX6UL_LCDIF1_BASE_ADDR,
+	.addr = 0,
+	.pixfmt = 24,
+	.detect = NULL,
+	.enable	= do_enable_parallel_lcd,
+	.mode	= {
+		.name			= "MD0430R",
+		.xres           = 800,
+		.yres           = 480 ,
+		.pixclock       = 32258,
+		.left_margin    = 88,
+		.right_margin   = 40,
+		.upper_margin   = 32,
+		.lower_margin   = 13,
+		.hsync_len      = 48,
+		.vsync_len      = 3,
+		.sync           = 0,
+		.vmode          = FB_VMODE_NONINTERLACED
 } } };
 size_t display_count = ARRAY_SIZE(displays);
 #endif

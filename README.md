@@ -11,7 +11,7 @@
 | DDR | ✅ 512 MiB |
 | SD/MMC | ✅ FSL_SDHC: 0, 1 |
 | 串口 | ✅ 正常 |
-| LCD (TFT7016) | ❌ 暂不支持 |
+| LCD (4.3" 800×480 RGB, MD0430R) | ✅ 已适配 |
 | 网络 (PHY SR8201F) | ❌ 待适配 |
 
 ## 环境
@@ -78,8 +78,8 @@ chmod +x imxdownload
 | ping 时 data abort 崩溃 | `start.S` SCTLR bit[1] `orr` → `bic` |
 | RX error frame（FEC_RBD_NO） | PHY 复位延迟 20→100ms、150→250ms |
 | PHY SR8201F 驱动不匹配 | 待驱动篇学习完成后解决 |
+| `unsupported panel`（屏不显示） | 代码已登记屏参数但 EMMC 旧环境变量覆盖 → `setenv panel <屏名>` + `saveenv` |
 
 ## 已知问题
 
-- **LCD（TFT7016）**：启动信息报 `unsupported panel TFT7016`，待适配
 - **网络（SR8201F）**：`Board Net Initialization Failed`，PHY 驱动与 SR8201F 不匹配，遗留
