@@ -12,7 +12,7 @@
 | SD/MMC | ✅ FSL_SDHC: 0, 1 |
 | 串口 | ✅ 正常 |
 | LCD (4.3" 800×480 RGB, MD0430R) | ✅ 已适配 |
-| 网络 (PHY SR8201F) | ❌ 待适配 |
+| 网络 (PHY SR8201F) | 🔄 PHY 驱动已编写，FEC 初始化待修 |
 
 ## 环境
 
@@ -82,4 +82,4 @@ chmod +x imxdownload
 
 ## 已知问题
 
-- **网络（SR8201F）**：`Board Net Initialization Failed`，PHY 驱动与 SR8201F 不匹配，遗留
+- **网络（SR8201F）**：PHY 驱动已编写（`drivers/net/phy/sr8201f.c`，编译通过待上板验证）；当前阻塞在 FEC 控制器初始化失败（`Board Net Initialization Failed`），**下一步：适配板级 FEC 配置**（引脚/复位/PHY 地址）

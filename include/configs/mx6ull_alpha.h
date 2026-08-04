@@ -343,6 +343,7 @@
 
 #define CONFIG_PHYLIB
 #define CONFIG_PHY_MICREL
+#define CONFIG_PHY_SR8201F
 #endif
 
 #define CONFIG_IMX_THERMAL
